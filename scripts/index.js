@@ -60,11 +60,9 @@ newUser.getPassword();
 
 
 
-function filterBy (arr, typeOfData) {
-    const arr2 = arr.filter(function(number){
-        return number !== typeOfData;
-    });
-    console.log(arr2);
+function filterBy (arr, type) {
+    const arr1 = arr.filter(item => typeof item !== type)
+    console.log(arr1)
 }
 
-filterBy([24, 02, 2022, "no war", null, true], null);
+filterBy([24, 02, 2022, "no war", null, true], "boolean");
